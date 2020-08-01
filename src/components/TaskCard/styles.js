@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     borderRadius: 18,
-    padding: 12,
+    padding: 14,
     margin: 4,
     marginHorizontal: 12,
   },

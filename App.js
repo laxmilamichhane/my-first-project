@@ -1,3 +1,11 @@
-import Profile from './src/screens/profile';
+import React from 'react';
+import { SafeAreaView, StatusBar } from 'react-native';
+import Course from './src/screens/discussthree';
 
-export default Profile;
+const App = () => (
+  <SafeAreaView style={{ paddingTop: StatusBar.currentHeight, flex: 1 }}>
+    <Course/>
+  </SafeAreaView>
+);
+
+export default App;
