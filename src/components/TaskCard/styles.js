@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 23,
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
   },
   lower: {
     fontSize: 13,
-    color: 'white',
+    color: 'black',
   },
   container: {
     flex: 1,

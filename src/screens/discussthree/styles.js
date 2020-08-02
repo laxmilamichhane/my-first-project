@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   pie: {
-    paddingVertical: 130,
+    paddingVertical: 100,
   },
   circle: {
     backgroundColor: '#553e9b',
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     position: 'absolute',
     marginLeft: 86,
-    
+
   },
   circle3: {
     backgroundColor: '#6bd5e5',
@@ -66,6 +66,11 @@ const styles = StyleSheet.create({
     fontSize: 22,
     paddingLeft: 6,
     color: 'white'
+  },
+  datee: {
+    fontSize: 20,
+    color: 'gray',
+    margin: 4,
   }
 });
 
