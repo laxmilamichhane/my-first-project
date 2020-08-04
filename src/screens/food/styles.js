@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { gray } from 'ansi-colors';
+
 
 const styles = StyleSheet.create({
   screen: {
@@ -15,14 +15,12 @@ const styles = StyleSheet.create({
     marginLeft: 2,
   },
   uppercontainer: {
-
-    padding: 12,
+    padding: 10,
   },
   icon: {
     height: 20,
     width: 20,
     marginLeft: 8,
-    marginTop: 10,
   },
   codse: {
     height: 130,
@@ -32,12 +30,16 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 26,
-    marginLeft: 6,
+    marginLeft: 14,
   },
   des: {
     fontSize: 18,
     marginLeft: 14,
     color: 'gray',
+    marginBottom: 10,
+  },
+  lowercontainer: {
+    marginTop: 12,
   }
 });
 export default styles;

@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     height: 270,
     borderRadius: 16,
     padding: 10,
-    margin: 10,
+    marginHorizontal: 10,
+ 
   },
   title:
   {
