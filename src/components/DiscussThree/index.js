@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text } from 'react-native';
 
 import styles from './styles';
 
@@ -11,8 +11,6 @@ const DiscussThree = ({ type, color }) => {
       </View>
       <Text style={styles.typee}>{type}</Text>
     </View>
-
-
   );
 };
 export default DiscussThree;

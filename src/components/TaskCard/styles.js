@@ -18,9 +18,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     borderRadius: 18,
-    padding: 14,
+    padding: 18,
     margin: 4,
     marginHorizontal: 12,
+    marginVertical: 10,
   },
 });
 

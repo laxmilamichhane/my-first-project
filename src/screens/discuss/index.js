@@ -6,7 +6,7 @@ import styles from './styles'
 const App = () => (
   <View>
     <ImageBackground
-      source={require('./img.png')}
+      source={require('./d.png')}
       style={styles.Logo}
     />
     <View style={styles.container}>
