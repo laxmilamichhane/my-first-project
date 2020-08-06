@@ -7,10 +7,8 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 10,
     marginHorizontal: 10,
- 
   },
-  title:
-  {
+  title: {
     fontSize: 18,
     color: 'white',
     fontWeight: 'bold',
