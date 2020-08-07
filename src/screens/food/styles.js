@@ -1,11 +1,9 @@
 import { StyleSheet } from 'react-native';
 
-
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    padding: 10
-
+    padding: 10,
   },
   image: {
     height: 50,
@@ -25,7 +23,7 @@ const styles = StyleSheet.create({
   codse: {
     height: 130,
     width: 200,
-    resizeMode: "contain",
+    resizeMode: 'contain',
     alignSelf: 'flex-end',
   },
   name: {
@@ -40,6 +38,6 @@ const styles = StyleSheet.create({
   },
   lowercontainer: {
     marginTop: 12,
-  }
+  },
 });
 export default styles;

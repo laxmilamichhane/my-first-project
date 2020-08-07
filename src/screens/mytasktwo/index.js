@@ -1,12 +1,10 @@
 import React from 'react';
-import { ScrollView, View, Text, Image } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import MyTasktwo from '../../components/MyTasktwo';
 
 import styles from './style';
 const App = () => (
-
   <View style={{ backgroundColor: '#f4b0c0', flex: 1, paddingTop: 60 }}>
-
     <View style={styles.con}>
       <Text style={styles.how}>How is Syntax doing?</Text>
       <View style={styles.all}>
@@ -32,7 +30,7 @@ const App = () => (
         description="Moderate"
       />
       <Text style={styles.how}>Other needs</Text>
-      <View style={{ScrollView:'horizontal'}}>
+      <View style={{ ScrollView: 'horizontal' }}>
         <View style={{ flexDirection: 'row' }}>
           <Image
             source={{
@@ -60,8 +58,9 @@ const App = () => (
               uri:
                 'https://thumbs.dreamstime.com/b/sleeping-dog-illustration-vector-isolated-white-background-sleeping-dog-illustration-cartoon-dog-136792890.jpg',
             }}
-            style={styles.image2}/>
-            <Image
+            style={styles.image2}
+          />
+          <Image
             source={{
               uri:
                 'https://thumbs.dreamstime.com/b/sleeping-dog-illustration-vector-isolated-white-background-sleeping-dog-illustration-cartoon-dog-136792890.jpg',
@@ -77,18 +76,23 @@ const App = () => (
           <Text style={styles.lowertext}>Bedtime</Text>
         </View>
       </View>
-      <View style={{ backgroundColor: '#f9a9bc', padding: 12, borderWidth: 1, borderColor: '#f9a9bc', borderTopLeftRadius: 46, borderTopRightRadius: 46, }}>
+      <View
+        style={{
+          backgroundColor: '#f9a9bc',
+          padding: 12,
+          borderWidth: 1,
+          borderColor: '#f9a9bc',
+          borderTopLeftRadius: 46,
+          borderTopRightRadius: 46,
+        }}>
         <Text style={styles.how}>Medical routine</Text>
         <View style={styles.lowercontainer}>
           <Text style={styles.lasttext}>• Rabies Vaccine ✔</Text>
-          <Text style={styles.lasttext}>• Distemper  (not yet)</Text>
-          <Text style={styles.lasttext}>• Leptospirosis  ✔</Text>
+          <Text style={styles.lasttext}>• Distemper (not yet)</Text>
+          <Text style={styles.lasttext}>• Leptospirosis ✔</Text>
         </View>
       </View>
     </View>
   </View>
-
-
-
 );
 export default App;
