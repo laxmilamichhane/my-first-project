@@ -3,22 +3,23 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   name: {
     fontSize: 16,
-    color: 'gray',
-    marginLeft: 12,
-    marginBottom: 6,
+    color: 'white',
+    marginLeft: 20,
+    marginBottom: 4,
   },
-  input: { flex: 1, padding: 16, fontSize: 16 },
+  input: { flex: 1, padding: 8, fontSize: 16 },
   locate: {
     width: 20,
     height: 20,
-    marginHorizontal: 16,
+    marginHorizontal: 10,
   },
   inputContainer: {
     flexDirection: 'row',
-    backgroundColor: '#e1e8e4',
+    backgroundColor: 'white',
     borderRadius: 10,
-    marginBottom: 20,
+    marginBottom: 10,
     alignItems: 'center',
+    marginHorizontal: 10,
   },
 });
 export default styles;

@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginHorizontal: 14,
     marginTop: 12,
-  
   },
   box: {
     height: 66,

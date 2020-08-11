@@ -3,14 +3,14 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-
     backgroundColor: 'white',
   },
   image: {
-    height: 50,
-    width: 50,
+    height: 54,
+    width: 54,
     borderRadius: 12,
     alignSelf: 'flex-end',
+    marginRight: 6,
   },
   container: {
     justifyContent: 'space-between',
@@ -39,10 +39,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   img: {
-    width: 34,
-    height: 34,
-    marginRight: 64,
-    marginBottom: 4,
+    width: 24,
+    height: 24,
+    marginRight: 90,
   },
 });
 export default styles;

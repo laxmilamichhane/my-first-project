@@ -13,7 +13,7 @@ const buttonList = [
     screenName: 'Discuss',
   },
   {
-    name: 'Course',
+    name: 'Planning',
     image: [require('./patent.png')],
     color: '#fc7b5a',
     screenName: 'Course',
@@ -32,10 +32,10 @@ const buttonList = [
     screenName: 'Creativity',
   },
   {
-    name: 'Design',
+    name: 'Profile',
     image: [require('./paint.png')],
     color: '#e6f268',
-    screenName: 'Design',
+    screenName: 'Profile',
   },
   {
     name: 'Get Advice',

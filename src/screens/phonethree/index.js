@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ScrollView, Text } from 'react-native';
 
 import styles from './styles';
 import PhoneForm from '../../components/PhoneForm';
 import PhoneButton from '../../components/PhoneButton';
-import { ScrollView } from 'react-native-gesture-handler';
 
 const App = () => (
   <ScrollView>

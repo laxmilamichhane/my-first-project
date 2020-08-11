@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 20,
     marginLeft: 12,
-    marginTop: 10,
+    marginTop: 6,
   },
   placee: {
     fontSize: 14,

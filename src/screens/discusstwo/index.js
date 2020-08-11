@@ -56,19 +56,19 @@ const App = () => (
               It is a long established fact that a reader will be
             </Text>
             <Text style={styles.message}>
-              distracted by the readable content of a page{' '}
+              distracted by the readable content of a page
             </Text>
             <Text style={styles.message}>
-              when looking at its layout. The point of using{' '}
+              when looking at its layout. The point of using
             </Text>
             <Text style={styles.message}>
-              Lorem ipsum is that it has a more or less{' '}
+              Lorem ipsum is that it has a more or less
             </Text>
             <Text style={styles.message}>
-              normal distribution of letters, as opposed to{' '}
+              normal distribution of letters, as opposed to
             </Text>
             <Text style={styles.message}>
-              using 'Content here,Content here', making it{' '}
+              using 'Content here,Content here', making it
             </Text>
             <Text style={styles.message}>look like readable English.</Text>
           </View>

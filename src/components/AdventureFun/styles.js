@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 14,
     marginLeft: 8,
+    marginBottom: 10,
   },
 });
 export default styles;

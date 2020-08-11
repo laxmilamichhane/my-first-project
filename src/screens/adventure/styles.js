@@ -11,16 +11,16 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 40,
     fontWeight: 'bold',
-    marginLeft: 12,
-    color: 'white',
+    marginLeft: 10,
+    color: '#042da5',
   },
   img: {
     width: '100%',
     height: '100%',
   },
   smalltext: {
-    color: 'white',
-    marginLeft: 16,
+    color: '#000000',
+    marginLeft: 12,
     fontSize: 13,
   },
   button: {

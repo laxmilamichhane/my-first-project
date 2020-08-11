@@ -38,7 +38,7 @@ listName = [
 ];
 
 const App = ({ navigation }) => (
-  <View style={{ flex: 1, backgroundColor: 'black' }}>
+  <View style={{ flex: 1, backgroundColor: 'lightgray' }}>
     <View style={styles.container}>
       <View style={styles.item}>
         <Text style={styles.buy}>BUY</Text>

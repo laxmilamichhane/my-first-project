@@ -8,15 +8,13 @@ const App = ({ navigation }) => (
     <ImageBackground
       source={{
         uri:
-          'https://static.dribbble.com/users/727440/screenshots/6244299/camping.gif',
+          'https://cdn.kimkim.com/files/a/article_images/images/0fafde6abb863cef035ddd1554b5e329137a9bd8/big-278eeb14c6c1b38153a8ca8df6ab6ead.jpg',
       }}
       style={styles.img}>
-      <View style={{ marginTop: 80, marginBottom: 330 }}>
-        <Text style={styles.text}>let's go on</Text>
-        <Text style={styles.text}>an adventure</Text>
+      <View style={{ marginTop: 50, marginBottom: 330 }}>
+        <Text style={styles.text}>𝐥𝐞𝐭'𝐬 𝐠𝐨 𝐨𝐧 𝐚𝐧 𝐚𝐝𝐯𝐞𝐧𝐭𝐮𝐫𝐞</Text>
         <Text style={styles.smalltext}>
-          Leave and go where there are no electricity no mobile, networks and
-          not many humans.
+          Leave and go where there are no mobile, networks and not many humans.
         </Text>
         <Text style={styles.smalltext}>
           Adventure is waiting for you there.
@@ -24,7 +22,7 @@ const App = ({ navigation }) => (
       </View>
       <TouchableOpacity
         activeOpacity={0.85}
-        onPress={() => navigation.navigate('Adventuretwo')}>
+        onPress={() => navigation.navigate('Home')}>
         <View style={styles.button}>
           <Text style={styles.start}>Get started</Text>
         </View>
