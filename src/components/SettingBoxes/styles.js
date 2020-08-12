@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#dbdce4',
   },
   title: {
-    fontSize: 22,
+    fontSize: 20,
     flex: 1,
   },
   image: {
