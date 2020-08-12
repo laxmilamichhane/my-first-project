@@ -6,7 +6,7 @@ import styles from './styles';
 import NameTypes from '../../components/NameTypes';
 import RecipeBox from '../../components/RecipeBox';
 import RecipeNew from '../../components/RecipeNew';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 const newList = [
   {
@@ -49,7 +49,7 @@ const recipeList = [
   },
   {
     image: require('./no.jpeg'),
-    name: 'Granola With Fruits',
+    name: 'Noodles',
     des: 'Breakfast lightfood',
     bgcolor: '#f2d39c',
     images: require('./plus.png'),
@@ -57,21 +57,33 @@ const recipeList = [
 ];
 
 const App = ({ navigation }) => (
-  <ScrollView>
+  <ScrollView showsVerticalScrollIndicator={false}>
     <View style={{ backgroundColor: 'white', padding: 4 }}>
       <Image
         source={{
           uri:
-            'https://static8.depositphotos.com/1031551/816/i/450/depositphotos_8166666-stock-photo-old-cookbook.jpg',
+            'https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&w=1000&q=80',
         }}
         style={styles.image}
       />
+      <TouchableOpacity
+        activeOpacity={0.85}
+        onPress={() => navigation.navigate('Setting')}>
+        <Image source={require('./management.png')} style={styles.setting} />
+      </TouchableOpacity>
+
       <View style={{ flexDirection: 'row' }}>
         <Image source={require('./laxmi.jpg')} style={styles.person} />
-        <View style={{ marginTop: 210, margin: 10 }}>
+        <View
+          style={{
+            marginTop: 138,
+            flex: 1,
+            marginLeft: 6,
+          }}>
           <Text style={styles.name}>Laxmi</Text>
           <Text style={{ fontSize: 16 }}>1.74 Followers</Text>
         </View>
+
         <Image
           source={{
             uri:
@@ -90,7 +102,7 @@ const App = ({ navigation }) => (
       <View style={styles.viewone}>
         <View style={styles.viewtwo} />
       </View>
-      <View style={{ flexDirection: 'row' }}>
+      <View style={{ flexDirection: 'row', margin: 6 }}>
         <Text style={styles.recommended}>Recommended</Text>
         <Text style={styles.see}>SEE ALL</Text>
       </View>
@@ -116,6 +128,7 @@ const App = ({ navigation }) => (
       </View>
       <View>
         <Text style={styles.new}>New Recipes</Text>
+
         <FlatList
           keyExtractor={(item, index) => item.title + index.toString()}
           data={newList}

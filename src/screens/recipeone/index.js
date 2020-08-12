@@ -12,7 +12,7 @@ const App = () => (
           'https://www.oetker.co.uk/Recipe/Recipes/oetker.co.uk/uk-en/pancakes/image-thumb__73355__RecipeDetailsLightBox/american-pancake-stack.jpg',
       }}
       style={styles.image}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
           <Text style={styles.name}>Pancakes</Text>
           <Text
@@ -31,7 +31,7 @@ const App = () => (
               }}
               style={styles.star}
             />
-            <Text style={{ fontSize: 20, marginLeft: 120 }}>
+            <Text style={{ fontSize: 20, marginLeft: 98 }}>
               ❤️️ 1.47 ✉️ 278
             </Text>
           </View>
@@ -45,7 +45,12 @@ const App = () => (
             and butter...
           </Text>
           <Text style={{ alignSelf: 'center' }}>🔽</Text>
-          <View style={{ flexDirection: 'row', marginBottom: 20 }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginBottom: 20,
+              alignItems: 'center',
+            }}>
             <SmallButtons name="⏱ 30 min" bgcolor="pink" />
             <SmallButtons name="🥞 2 people" bgcolor="pink" />
             <SmallButtons name="⚡️ 450 cal" bgcolor="pink" />

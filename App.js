@@ -8,9 +8,9 @@ import cookmasterlog from './src/screens/cookmasterlog';
 import cookmastersign from './src/screens/cookmastersign';
 import cookmasterpass from './src/screens/cookmasterpass';
 import cookrecipe from './src/screens/cookrecipe';
-import advisor from './src/screens/advisor';
+import setting from './src/screens/setting';
 import recipeone from './src/screens/recipeone';
-import profile from './src/screens/profile';
+import settingapp from './src/screens/settingapp';
 const Stack = createStackNavigator();
 
 const App = () => (
@@ -31,11 +31,10 @@ const App = () => (
           component={cookrecipe}
         />
         <Stack.Screen name="Pancakes" component={recipeone} />
-        <Stack.Screen name="Advisor" component={advisor} />
-        <Stack.Screen name="Profile" component={profile} />
+        <Stack.Screen name="Setting" component={setting} />
+        <Stack.Screen name="App settings" component={settingapp} />
       </Stack.Navigator>
     </NavigationContainer>
   </SafeAreaView>
 );
-
 export default App;

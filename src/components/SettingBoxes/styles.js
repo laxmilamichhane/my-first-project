@@ -1,25 +1,26 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
+    borderBottomWidth: 1,
     margin: 4,
     flexDirection: 'row',
-    backgroundColor: '#e884a7',
     padding: 8,
-    borderRadius: 10,
+    borderBottomColor: '#dbdce4',
   },
-  text: {
+  title: {
     fontSize: 22,
-    margin: 4,
+    flex: 1,
   },
   image: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+    width: 40,
+    height: 40,
+    alignSelf: 'flex-start',
+    marginRight: 10,
   },
-  des: {
-    fontSize: 16,
-    color: 'white',
-    margin: 2,
+  icon: {
+    width: 18,
+    height: 18,
+    marginTop: 18,
   },
 });
 export default styles;

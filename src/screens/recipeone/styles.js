@@ -32,5 +32,9 @@ const styles = StyleSheet.create({
     color: 'gray',
     letterSpacing: 1,
   },
+  set: {
+    width: 1,
+    height: 1,
+  },
 });
 export default styles;

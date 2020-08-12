@@ -16,7 +16,7 @@ const NameTypes = ({ type, color, selected }) => {
         style={[
           styles.type,
           color && { color },
-          selected && { fontWeight: 'bold', marginLeft: 18 },
+          selected && { fontWeight: 'bold', marginLeft: 6 },
         ]}>
         {type}
       </Text>
