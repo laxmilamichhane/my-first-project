@@ -3,7 +3,7 @@ import { View, Image, Text } from 'react-native';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const SettingBoxes = ({ image, title, icon, onPress }) => {
+const SettingBoxes = ({ image, title, icon, onPress, selected }) => {
   return (
     <TouchableOpacity activeOpacity={0.85} onPress={onPress}>
       <View style={styles.container}>
