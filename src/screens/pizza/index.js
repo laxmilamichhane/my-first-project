@@ -35,7 +35,8 @@ const App = ({ navigation }) => (
         <Image source={require('./hashtag.png')} style={styles.tag} />
         <SearchBar showIcon onPress={() => navigation.navigate('Result')} />
       </View>
-      <Text style={styles.recent}>RECENT SEARCHES</Text>
+      <Text style={styles.recent}>🕒 RECENT SEARCHES</Text>
+
       <FlatList
         keyExtractor={(item, index) => item.title + index.toString()}
         showsVerticalScrollIndicator={false}

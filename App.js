@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import pizza from './src/screens/pizza';
-import cookmasterlog from './src/screens/cookmasterlog';
-import cookmastersign from './src/screens/cookmastersign';
+import pizzaresult from './src/screens/pizzaresult';
+import pizzaresult2 from './src/screens/pizzaresult2';
 import cookmasterpass from './src/screens/cookmasterpass';
 import cookrecipe from './src/screens/cookrecipe';
 import setting from './src/screens/setting';
@@ -22,8 +22,11 @@ const App = () => (
           name="_"
           component={pizza}
         />
-        <Stack.Screen name="Log in" component={cookmasterlog} />
-        <Stack.Screen name="Sign up" component={cookmastersign} />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Result"
+          component={pizzaresult}
+        />
         <Stack.Screen name="Reset" component={cookmasterpass} />
         <Stack.Screen
           options={{ headerShown: false }}

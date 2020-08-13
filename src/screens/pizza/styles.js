@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     color: 'white',
     fontSize: 16,
+    marginBottom: 10,
   },
   pizza: {
     marginBottom: 8,
