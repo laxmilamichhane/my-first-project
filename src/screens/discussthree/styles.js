@@ -1,10 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { lightblue } from 'color-name';
-import { hidden } from 'ansi-colors';
 
 const styles = StyleSheet.create({
   container: {
-
     flex: 1,
   },
   dots: {
@@ -34,9 +31,9 @@ const styles = StyleSheet.create({
     borderRadius: 80,
     position: 'absolute',
     marginLeft: 10,
-    opacity: 0.90,
+    opacity: 0.9,
     marginTop: 30,
-    zIndex: 9999
+    zIndex: 9999,
   },
   circle2: {
     backgroundColor: '#f76f20',
@@ -44,7 +41,6 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     position: 'absolute',
     marginLeft: 86,
-
   },
   circle3: {
     backgroundColor: '#6bd5e5',
@@ -54,24 +50,23 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 104,
     left: 70,
-    opacity: 0.80,
+    opacity: 0.8,
   },
   number: {
     fontSize: 26,
     color: 'white',
-
   },
   number3: {
     paddingTop: 12,
     fontSize: 22,
     paddingLeft: 6,
-    color: 'white'
+    color: 'white',
   },
   datee: {
     fontSize: 20,
     color: 'gray',
     margin: 4,
-  }
+  },
 });
 
 export default styles;

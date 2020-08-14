@@ -10,13 +10,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 1,
     alignSelf: 'center',
+    marginTop: 20,
   },
   image: {
     width: 120,
     height: 120,
     borderRadius: 60,
     alignSelf: 'center',
-    marginTop: 10,
+    marginTop: 20,
   },
   nickname: {
     fontSize: 20,
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
   address: {
     color: 'grey',
     textAlign: 'center',
+    marginBottom: 50,
   },
 });
 export default styles;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, ScrollView, FlatList } from 'react-native';
+import { View, Image, Text, FlatList } from 'react-native';
 
 import styles from './styles';
 import DiscussThree from '../../components/DiscussThree';

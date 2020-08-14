@@ -3,11 +3,9 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import pizza from './src/screens/pizza';
-import pizzaresult from './src/screens/pizzaresult';
-import pizzaresult2 from './src/screens/pizzaresult2';
-import cookmasterpass from './src/screens/cookmasterpass';
-import cookrecipe from './src/screens/cookrecipe';
+import space from './src/screens/space';
+import space2 from './src/screens/space2';
+import space3 from './src/screens/space3';
 import setting from './src/screens/setting';
 import recipeone from './src/screens/recipeone';
 import settingapp from './src/screens/settingapp';
@@ -20,21 +18,21 @@ const App = () => (
         <Stack.Screen
           options={{ headerShown: false }}
           name="_"
-          component={pizza}
+          component={space}
         />
         <Stack.Screen
           options={{ headerShown: false }}
-          name="Result"
-          component={pizzaresult}
+          name="Page2"
+          component={space2}
         />
-        <Stack.Screen name="Reset" component={cookmasterpass} />
         <Stack.Screen
           options={{ headerShown: false }}
-          name="Recipe"
-          component={cookrecipe}
+          name="Redesign"
+          component={space3}
         />
+        <Stack.Screen name="Settings" component={setting} />
         <Stack.Screen name="Pancakes" component={recipeone} />
-        <Stack.Screen name="Setting" component={setting} />
+
         <Stack.Screen name="App settings" component={settingapp} />
       </Stack.Navigator>
     </NavigationContainer>
