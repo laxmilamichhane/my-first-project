@@ -9,7 +9,7 @@ const App = ({ navigation }) => (
       <Image source={require('./slack.png')} style={styles.logo} />
       <Text style={styles.logoname}>Oneder</Text>
       <TouchableOpacity
-        activeOpacity={0.85}
+        activeOpacity={0.8}
         onPress={() => navigation.navigate('Settings')}>
         <Image source={require('./menu.png')} style={styles.menu} />
       </TouchableOpacity>

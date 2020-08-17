@@ -26,7 +26,7 @@ const App = ({ navigation }) => (
         marginBottom: 10,
       }}>
       <TouchableOpacity
-        activeOpacity={0.85}
+        activeOpacity={0.4}
         onPress={() => navigation.navigate('Page2')}>
         <Image source={require('./sign.png')} style={styles.icon} />
       </TouchableOpacity>
