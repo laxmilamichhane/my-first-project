@@ -3,8 +3,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import test from './src/screens/test';
-import test2 from './src/screens/test2';
+import calculator from './src/screens/calculator';
 import space3 from './src/screens/space3';
 import setting from './src/screens/setting';
 import recipeone from './src/screens/recipeone';
@@ -18,12 +17,7 @@ const App = () => (
         <Stack.Screen
           options={{ headerShown: false }}
           name="_"
-          component={test}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Page2"
-          component={test2}
+          component={calculator}
         />
         <Stack.Screen
           options={{ headerShown: false }}
