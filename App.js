@@ -3,6 +3,8 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import friends from './src/screens/friends';
+import friendsprofile from './src/screens/friendsprofile';
 import cookmaster from './src/screens/cookmaster';
 import cookmasterlog from './src/screens/cookmasterlog';
 import cookmastersign from './src/screens/cookmastersign';
@@ -18,10 +20,19 @@ const App = () => (
       <Stack.Navigator>
         <Stack.Screen
           options={{ headerShown: false }}
+          name="Home"
+          component={friends}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Friendsprofile"
+          component={friendsprofile}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
           name="_"
           component={cookmaster}
         />
-
         <Stack.Screen
           options={{ headerShown: false }}
           name="Log in"

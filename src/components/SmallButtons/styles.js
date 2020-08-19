@@ -6,14 +6,13 @@ const styles = StyleSheet.create({
     width: 100,
     borderRadius: 10,
     marginTop: 30,
-    padding: 4,
-    marginRight: 8,
     alignSelf: 'center',
-    marginLeft: 8,
+    marginHorizontal: 8,
   },
   name: {
-    fontSize: 16,
+    fontSize: 18,
     textAlign: 'center',
+    color: 'white',
   },
 });
 export default styles;
