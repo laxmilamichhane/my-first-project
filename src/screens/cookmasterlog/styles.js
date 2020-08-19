@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   pic: {
     width: 400,
     height: 300,
-    marginTop: 20,
+    marginTop: 30,
     marginLeft: 4,
   },
   screen: {
@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     padding: 6,
   },
-  sign: { color: '#ff6098', marginTop: 72, fontSize: 16 },
+  sign: { color: '#ff6098', marginTop: 120, fontSize: 16 },
 });
 export default styles;

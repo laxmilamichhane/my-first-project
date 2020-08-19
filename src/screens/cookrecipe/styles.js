@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f26a9a',
     height: 6,
     borderRadius: 3,
-    marginRight: 260,
+    marginRight: 270,
   },
   see: {
     color: '#f26d9b',

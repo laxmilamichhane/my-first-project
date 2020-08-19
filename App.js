@@ -3,10 +3,12 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import calculator from './src/screens/calculator';
-import space3 from './src/screens/space3';
-import setting from './src/screens/setting';
+import cookmaster from './src/screens/cookmaster';
+import cookmasterlog from './src/screens/cookmasterlog';
+import cookmastersign from './src/screens/cookmastersign';
+import cookrecipe from './src/screens/cookrecipe';
 import recipeone from './src/screens/recipeone';
+import cookmasterpass from './src/screens/cookmasterpass';
 import settingapp from './src/screens/settingapp';
 const Stack = createStackNavigator();
 
@@ -17,15 +19,31 @@ const App = () => (
         <Stack.Screen
           options={{ headerShown: false }}
           name="_"
-          component={calculator}
+          component={cookmaster}
+        />
+
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Log in"
+          component={cookmasterlog}
         />
         <Stack.Screen
           options={{ headerShown: false }}
-          name="Redesign"
-          component={space3}
+          name="Sign up"
+          component={cookmastersign}
         />
-        <Stack.Screen name="Settings" component={setting} />
-        <Stack.Screen name="Pancakes" component={recipeone} />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Recipe"
+          component={cookrecipe}
+        />
+
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Pancakes"
+          component={recipeone}
+        />
+        <Stack.Screen name="Reset" component={cookmasterpass} />
 
         <Stack.Screen name="App settings" component={settingapp} />
       </Stack.Navigator>

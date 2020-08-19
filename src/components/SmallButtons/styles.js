@@ -8,6 +8,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
     padding: 4,
     marginRight: 8,
+    alignSelf: 'center',
+    marginLeft: 8,
   },
   name: {
     fontSize: 16,

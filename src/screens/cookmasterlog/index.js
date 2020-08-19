@@ -1,56 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, View, Text, TouchableOpacity, ScrollView } from 'react-native';
 
 import styles from './styles';
 import InputForm from '../../components/InputForm';
 import LoginSignup from '../../components/LoginSignup';
 
-const App = ({ navigation }) => (
-  <ScrollView>
+const App = ({ navigation }) => {
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  return (
     <View style={styles.screen}>
-      <Image source={require('./wel.png')} style={styles.pic} />
-      <Text style={styles.title}>Welcome back!</Text>
+      <ScrollView>
+        <Image source={require('./wel.png')} style={styles.pic} />
 
-      <InputForm
-        image={require('./user.png')}
-        selected
-        borderColor="#ff6098"
-        placeholder="Email/username"
-      />
-      <InputForm
-        image={require('./password.png')}
-        isPassword
-        placeholder="Enter your password"
-      />
+        <Text style={styles.title}>Welcome back!</Text>
 
-      <LoginSignup
-        name="Log in"
-        bgcolor="#ff6098"
-        textcolor="white"
-        borderColor="#ff6098"
-        onPress={() => navigation.navigate('Recipe')}
-      />
-      <TouchableOpacity activeOpacity={0.8}>
-        <Text
-          style={styles.password}
-          onPress={() => navigation.navigate('Reset')}>
-          Forget Password?
-        </Text>
-      </TouchableOpacity>
+        <InputForm
+          image={require('./user.png')}
+          selected
+          borderColor="#ff6098"
+          placeholder="Email/username"
+          onChangeText={(userInput) => setName(userInput)}
+        />
+        <InputForm
+          image={require('./password.png')}
+          isPassword
+          placeholder="Enter your password"
+          onChangeText={(userInput) => setPassword(userInput)}
+        />
 
-      <View style={{ flexDirection: 'row' }}>
-        <Text style={[styles.password, { marginTop: 66, marginLeft: 90 }]}>
-          Don't have an account?
-        </Text>
+        <LoginSignup
+          name="Log in"
+          bgcolor="#ff6098"
+          textcolor="white"
+          borderColor="#ff6098"
+          onPress={() => navigation.navigate('Recipe', { name, password })}
+        />
         <TouchableOpacity activeOpacity={0.8}>
           <Text
-            style={styles.sign}
-            onPress={() => navigation.navigate('Sign up')}>
-            Sign up
+            style={styles.password}
+            onPress={() => navigation.navigate('Reset')}>
+            Forget Password?
           </Text>
         </TouchableOpacity>
-      </View>
+
+        <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
+          <Text style={[styles.password, { marginTop: 114 }]}>
+            Don't have an account?
+          </Text>
+          <TouchableOpacity activeOpacity={0.8}>
+            <Text
+              style={styles.sign}
+              onPress={() => navigation.navigate('Sign up')}>
+              Sign up
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
-  </ScrollView>
-);
+  );
+};
 export default App;

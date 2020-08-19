@@ -32,13 +32,19 @@ const recipeList = [
     des: 'Breakfast Lightfood',
     bgcolor: 'pink',
     images: require('./plus.png'),
+    description: 'Learning how to make easy Granola can be fun!',
+    time: '42 min',
+    people: '2 people',
   },
   {
     image: require('./avo.jpg'),
     name: 'Caprese Avocado',
-    des: 'Breakfast Lightfood',
+    des: 'Lightfood',
     bgcolor: '#5ed178',
     images: require('./plus.png'),
+    description: 'Learning how to make easy Caprse Avocado can be fun!',
+    time: '⏱ 35 min',
+    people: '2 people',
   },
   {
     image: require('./pan.png'),
@@ -46,6 +52,9 @@ const recipeList = [
     des: 'Snack Lighfood',
     bgcolor: '#ce8a31',
     images: require('./plus.png'),
+    description: 'Learning how to make easy Fluffy Pancakes can be fun!',
+    time: '⏱ 30 min',
+    people: '2 people',
   },
   {
     image: require('./no.jpeg'),
@@ -53,93 +62,99 @@ const recipeList = [
     des: 'Breakfast lightfood',
     bgcolor: '#f2d39c',
     images: require('./plus.png'),
+    description: 'Learning how to make easy Noodles can be fun!',
+    time: '⏱ 20 min',
+    people: '2 people',
   },
 ];
 
-const App = ({ navigation }) => (
-  <ScrollView showsVerticalScrollIndicator={false}>
-    <View style={{ backgroundColor: 'white', padding: 4 }}>
-      <Image
-        source={{
-          uri:
-            'https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&w=1000&q=80',
-        }}
-        style={styles.image}
-      />
-      <TouchableOpacity
-        activeOpacity={0.85}
-        onPress={() => navigation.navigate('Setting')}>
-        <Image source={require('./management.png')} style={styles.setting} />
-      </TouchableOpacity>
-
-      <View style={{ flexDirection: 'row' }}>
-        <Image source={require('./laxmi.jpg')} style={styles.person} />
-        <View
-          style={{
-            marginTop: 138,
-            flex: 1,
-            marginLeft: 6,
-          }}>
-          <Text style={styles.name}>Laxmi</Text>
-          <Text style={{ fontSize: 16 }}>1.74 Followers</Text>
-        </View>
-
+const App = ({ navigation, route }) => {
+  const { name } = route.params;
+  return (
+    <ScrollView showsVerticalScrollIndicator={false}>
+      <View style={{ backgroundColor: 'white', padding: 4 }}>
         <Image
           source={{
             uri:
-              'https://cdn140.picsart.com/260662596010212.png?type=webp&to=min&r=1024',
+              'https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&w=1000&q=80',
           }}
-          style={styles.follow}
+          style={styles.image}
         />
-      </View>
+        <TouchableOpacity
+          activeOpacity={0.85}
+          onPress={() => navigation.navigate('Setting')}>
+          <Image source={require('./management.png')} style={styles.setting} />
+        </TouchableOpacity>
 
-      <View style={{ flexDirection: 'row' }}>
-        <NameTypes type="Recipes" color="black" selected />
-        <NameTypes type="Galleries" color="black" />
-        <NameTypes type="Story" color="black" />
-      </View>
+        <View style={{ flexDirection: 'row' }}>
+          <Image source={require('./laxmi.jpg')} style={styles.person} />
+          <View
+            style={{
+              marginTop: 138,
+              flex: 1,
+              marginLeft: 6,
+            }}>
+            <Text style={styles.name}>{name || 'username'}</Text>
+            <Text style={{ fontSize: 16 }}>1.74 Followers</Text>
+          </View>
 
-      <View style={styles.viewone}>
-        <View style={styles.viewtwo} />
-      </View>
-      <View style={{ flexDirection: 'row', margin: 6 }}>
-        <Text style={styles.recommended}>Recommended</Text>
-        <Text style={styles.see}>SEE ALL</Text>
-      </View>
-      <View>
-        <FlatList
-          keyExtractor={(item, index) => item.title + index.toString()}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={recipeList}
-          renderItem={({ item, index }) => {
-            return (
-              <RecipeBox
-                image={item.image}
-                name={item.name}
-                des={item.des}
-                bgcolor={item.bgcolor}
-                images={item.images}
-                onPress={() => navigation.navigate('Pancakes')}
-              />
-            );
-          }}
-        />
-      </View>
-      <View>
-        <Text style={styles.new}>New Recipes</Text>
+          <Image
+            source={{
+              uri:
+                'https://cdn140.picsart.com/260662596010212.png?type=webp&to=min&r=1024',
+            }}
+            style={styles.follow}
+          />
+        </View>
 
-        <FlatList
-          keyExtractor={(item, index) => item.title + index.toString()}
-          data={newList}
-          renderItem={({ item, index }) => {
-            return (
-              <RecipeNew image={item.image} name={item.name} des={item.des} />
-            );
-          }}
-        />
+        <View style={{ flexDirection: 'row' }}>
+          <NameTypes type="Recipes" color="black" selected />
+          <NameTypes type="Galleries" color="black" />
+          <NameTypes type="Story" color="black" />
+        </View>
+
+        <View style={styles.viewone}>
+          <View style={styles.viewtwo} />
+        </View>
+        <View style={{ flexDirection: 'row', margin: 6 }}>
+          <Text style={styles.recommended}>Recommended</Text>
+          <Text style={styles.see}>SEE ALL</Text>
+        </View>
+        <View>
+          <FlatList
+            keyExtractor={(item, index) => item.title + index.toString()}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            data={recipeList}
+            renderItem={({ item, index }) => {
+              return (
+                <RecipeBox
+                  image={item.image}
+                  name={item.name}
+                  des={item.des}
+                  bgcolor={item.bgcolor}
+                  images={item.images}
+                  onPress={() => navigation.navigate('Pancakes', { item })}
+                />
+              );
+            }}
+          />
+        </View>
+        <View>
+          <Text style={styles.new}>New Recipes</Text>
+
+          <FlatList
+            keyExtractor={(item, index) => item.title + index.toString()}
+            data={newList}
+            renderItem={({ item, index }) => {
+              return (
+                <RecipeNew image={item.image} name={item.name} des={item.des} />
+              );
+            }}
+          />
+        </View>
       </View>
-    </View>
-  </ScrollView>
-);
+    </ScrollView>
+  );
+};
 export default App;
