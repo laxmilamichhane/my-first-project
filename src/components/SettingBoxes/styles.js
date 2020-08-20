@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     flex: 1,
   },
+  place: { fontSize: 18, color: 'gray' },
   image: {
     width: 40,
     height: 40,

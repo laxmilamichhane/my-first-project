@@ -32,5 +32,17 @@ const styles = StyleSheet.create({
     borderRadius: 75,
     marginLeft: 20,
   },
+  emailbox: {
+    backgroundColor: 'lightgray',
+    paddingHorizontal: 40,
+    borderRadius: 10,
+    marginHorizontal: 10,
+    paddingVertical: 6,
+    flex: 1,
+    alignItems: 'center',
+  },
+  email: {
+    fontSize: 20,
+  },
 });
 export default styles;

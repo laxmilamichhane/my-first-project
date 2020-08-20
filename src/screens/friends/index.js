@@ -12,7 +12,8 @@ const infoList = [
     image: require('./anju.jpg'),
     intro: 'INTRODUCTION',
     boxcolor: '#e85288',
-    about: 'I am Anju Lamichhane.',
+    buttoncolor: '#e85288',
+    place: 'Pokhara',
   },
   {
     name: 'Laxmi Chhetri',
@@ -20,7 +21,8 @@ const infoList = [
     image: require('./kali.png'),
     intro: 'INTRODUCTION',
     boxcolor: 'orange',
-    about: 'I am Anju Lamichhane.',
+    buttoncolor: 'orange',
+    place: 'Pokhara',
   },
   {
     name: 'Aayusha KC',
@@ -28,7 +30,7 @@ const infoList = [
     image: require('./aayu.jpg'),
     intro: 'INTRODUCTION',
     boxcolor: '#e2c961',
-    about: 'I am Aayusha KC.',
+    buttoncolor: '#e2c961',
   },
   {
     name: 'Sudha Shrestha',
@@ -36,7 +38,8 @@ const infoList = [
     image: require('./sudha.jpg'),
     intro: 'INTRODUCTION',
     boxcolor: '#f2bc7b',
-    about: 'I am Sudha Shrestha.',
+    buttoncolor: '#f2bc7b',
+    place: 'Pokhara',
   },
   {
     name: 'Anmol Basnet',
@@ -44,7 +47,8 @@ const infoList = [
     image: require('./anmol.jpg'),
     des: 'INTRODUCTION',
     boxcolor: 'lightgray',
-    about: 'I am Anmol Basnet.',
+    buttoncolor: 'lightgray',
+    place: 'Aabukhaireni',
   },
   {
     name: 'Reyma Lamichhane',
@@ -52,7 +56,8 @@ const infoList = [
     image: require('./reyma.jpg'),
     des: 'INTRODUCTION',
     boxcolor: '#f4b0c0',
-    about: 'I am Reyma Lamichhane.',
+    buttoncolor: '#f4b0c0',
+    place: 'Pokhara',
   },
 ];
 const App = ({ navigation }) => (

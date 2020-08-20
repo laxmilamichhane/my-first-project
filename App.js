@@ -3,7 +3,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import friends from './src/screens/friends';
+import unlock from './src/screens/unlock';
 import friendsprofile from './src/screens/friendsprofile';
 import cookmaster from './src/screens/cookmaster';
 import cookmasterlog from './src/screens/cookmasterlog';
@@ -21,7 +21,7 @@ const App = () => (
         <Stack.Screen
           options={{ headerShown: false }}
           name="Home"
-          component={friends}
+          component={unlock}
         />
         <Stack.Screen
           options={{ headerShown: false }}
