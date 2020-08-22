@@ -3,9 +3,8 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   name: {
     fontSize: 16,
-    color: 'white',
-    marginLeft: 20,
     marginBottom: 4,
+    marginTop: 6,
   },
   input: { flex: 1, padding: 8, fontSize: 16 },
   locate: {
@@ -16,10 +15,9 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    borderRadius: 10,
+    borderRadius: 6,
     marginBottom: 10,
     alignItems: 'center',
-    marginHorizontal: 10,
   },
 });
 export default styles;

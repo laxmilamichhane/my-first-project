@@ -3,8 +3,8 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import unlock from './src/screens/unlock';
-import friendsprofile from './src/screens/friendsprofile';
+import unlock from './src/screens/avatar';
+import avatar2 from './src/screens/avatar2';
 import cookmaster from './src/screens/cookmaster';
 import cookmasterlog from './src/screens/cookmasterlog';
 import cookmastersign from './src/screens/cookmastersign';
@@ -25,8 +25,8 @@ const App = () => (
         />
         <Stack.Screen
           options={{ headerShown: false }}
-          name="Friendsprofile"
-          component={friendsprofile}
+          name="Page2"
+          component={avatar2}
         />
         <Stack.Screen
           options={{ headerShown: false }}

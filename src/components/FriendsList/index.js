@@ -6,7 +6,7 @@ import styles from './styles';
 const FriendsList = ({ name, relation, image, onPress }) => {
   return (
     <TouchableOpacity activeOpacity={0.85} onPress={onPress}>
-      <View style={[styles.container]}>
+      <View style={styles.container}>
         <View style={{ flexDirection: 'row' }}>
           <Image source={image} style={styles.image} />
 
