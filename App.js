@@ -3,7 +3,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import unlock from './src/screens/avatar';
+import business from './src/screens/business';
 import avatar2 from './src/screens/avatar2';
 import cookmaster from './src/screens/cookmaster';
 import cookmasterlog from './src/screens/cookmasterlog';
@@ -21,7 +21,7 @@ const App = () => (
         <Stack.Screen
           options={{ headerShown: false }}
           name="Home"
-          component={unlock}
+          component={business}
         />
         <Stack.Screen
           options={{ headerShown: false }}
