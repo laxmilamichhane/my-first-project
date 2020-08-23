@@ -2,14 +2,18 @@ import React from 'react';
 import { View, Image, Text } from 'react-native';
 
 import styles from './styles';
-import { avatars } from '../avatar';
+import { avatars, avatarcolor } from '../avatar';
 
 const App = ({ route }) => {
-  const { name, position, image } = route.params;
+  const { name, position, image, colorIndex } = route.params;
   console.log(route);
   return (
     <View style={styles.screen}>
-      <View style={styles.uppercontainer}>
+      <View
+        style={[
+          styles.uppercontainer,
+          { backgroundColor: avatarcolor[colorIndex] },
+        ]}>
         <Image
           source={avatars[image] || require('./laxmi.jpg')}
           style={styles.image}

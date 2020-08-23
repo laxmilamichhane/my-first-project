@@ -2,7 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const ColorRow = ({ onPress, bgcolor, bdrcolor, selected, image }) => {
+const ColorRow = ({ onPress, backgroundColor, bdrcolor, selected }) => {
   return (
     <TouchableOpacity activeOpacity={0.85} onPress={onPress}>
       <View
@@ -10,7 +10,7 @@ const ColorRow = ({ onPress, bgcolor, bdrcolor, selected, image }) => {
           styles.view,
           { borderColor: bdrcolor, borderWidth: 4 },
           selected && {
-            backgroundColor: bgcolor,
+            backgroundColor: backgroundColor,
           },
         ]}></View>
     </TouchableOpacity>

@@ -14,6 +14,7 @@ export const avatars = [
   require('./5.png'),
   require('./6.png'),
 ];
+export const avatarcolor = ['red', 'yellow', 'green', '#af760a', '#8077ff'];
 
 const App = ({ navigation }) => {
   const [name, setName] = useState('');
@@ -50,39 +51,15 @@ const App = ({ navigation }) => {
         </View>
         <Text style={styles.avatar}>Select Color</Text>
         <View style={{ flexDirection: 'row' }}>
-          <ColorRow
-            bgcolor="red"
-            bdrcolor="red"
-            selected={nowPick === 'color1'}
-            onPress={() => setPick('color1')}
-          />
-
-          <ColorRow
-            bgcolor="green"
-            bdrcolor="green"
-            selected={nowPick === 'color2'}
-            onPress={() => setPick('color2')}
-          />
-
-          <ColorRow
-            bgcolor="yellow"
-            bdrcolor="yellow"
-            selected={nowPick === 'color3'}
-            onPress={() => setPick('color3')}
-          />
-          <ColorRow
-            bgcolor="blue"
-            bdrcolor="blue"
-            selected={nowPick === 'color4'}
-            onPress={() => setPick('color4')}
-          />
-
-          <ColorRow
-            bgcolor="purple"
-            bdrcolor="purple"
-            selected={nowPick === 'color5'}
-            onPress={() => setPick('color5')}
-          />
+          {avatarcolor.map((color, index) => (
+            <ColorRow
+              key={color}
+              bdrcolor={color}
+              backgroundColor={color}
+              selected={nowPick === index}
+              onPress={() => setPick(index)}
+            />
+          ))}
         </View>
         <TouchableOpacity
           activeOpacity={0.85}
@@ -91,6 +68,7 @@ const App = ({ navigation }) => {
               name,
               position,
               image: currentPicked,
+              colorIndex: nowPick,
             })
           }>
           <View style={{ marginTop: 100 }}>

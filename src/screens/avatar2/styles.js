@@ -7,13 +7,14 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
-    borderRadius: 60,
+    borderRadius: 20,
     alignSelf: 'center',
     marginTop: 130,
     position: 'absolute',
+    borderWidth: 1,
   },
   uppercontainer: {
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     padding: 100,
   },
   name: {
