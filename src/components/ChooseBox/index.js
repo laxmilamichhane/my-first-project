@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const ChooseBox = ({ type, image, selected, onPress, showIcon }) => {
+const ChooseBox = ({ type, image, selected, onPress, size }) => {
   return (
-    <TouchableOpacity activeOpacity={0.85} onPress={onPress}>
+    <TouchableOpacity activeOpacity={0.85} onPress={() => onPress(size)}>
       <View
         style={[
           styles.box,

@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const PrivatePublic = ({ type, onPress, selected }) => {
+const PrivatePublic = ({ work, onPress, selected, type }) => {
   return (
-    <TouchableOpacity activeOpacity={0.85} onPress={onPress}>
+    <TouchableOpacity activeOpacity={0.85} onPress={() => onPress(type)}>
       <View
         style={[
           styles.box,
@@ -15,7 +15,7 @@ const PrivatePublic = ({ type, onPress, selected }) => {
             borderStartColor: '#0035d6',
           },
         ]}>
-        <Text style={styles.name}>{type}</Text>
+        <Text style={styles.name}>{work}</Text>
 
         {selected && (
           <Image source={require('./japan.png')} style={styles.icon} />

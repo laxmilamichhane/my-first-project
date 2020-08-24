@@ -8,5 +8,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     textAlign: 'center',
   },
+  container: { flex: 1, alignItems: 'center' },
 });
 export default styles;
