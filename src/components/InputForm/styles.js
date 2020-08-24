@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    marginTop: 4,
   },
   icon: {
     height: 24,
@@ -10,11 +10,10 @@ const styles = StyleSheet.create({
     marginLeft: 14,
   },
   input: {
-    borderBottomWidth: 1,
-    marginHorizontal: 10,
-    paddingHorizontal: 30,
-    marginLeft: 20,
+    borderWidth: 1,
+    paddingHorizontal: 10,
     fontSize: 18,
+    paddingVertical: 6,
   },
 });
 export default styles;

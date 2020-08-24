@@ -17,7 +17,8 @@ const InputForm = ({
         placeholder={placeholder}
         secureTextEntry={isPassword}
         style={[styles.input, { borderColor: borderColor }]}
-        onChangeText={onChangeText}></TextInput>
+        onChangeText={onChangeText}
+      />
     </View>
   );
 };

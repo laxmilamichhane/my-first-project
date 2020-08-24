@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import business from './src/screens/business';
-import avatar2 from './src/screens/avatar2';
+import business2 from './src/screens/business2';
 import cookmaster from './src/screens/cookmaster';
 import cookmasterlog from './src/screens/cookmasterlog';
 import cookmastersign from './src/screens/cookmastersign';
@@ -26,7 +26,7 @@ const App = () => (
         <Stack.Screen
           options={{ headerShown: false }}
           name="Page2"
-          component={avatar2}
+          component={business2}
         />
         <Stack.Screen
           options={{ headerShown: false }}
