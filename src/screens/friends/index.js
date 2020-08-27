@@ -1,9 +1,12 @@
-import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, FlatList, TouchableOpacity, Modal } from 'react-native';
 
 import styles from './styles';
 
 import FriendsList from '../../components/FriendsList';
+import Promomodal from '../../components/PromoModal';
+import SmallModal from '../../components/SmallModal';
+import BuyModal from '../../components/BuyModal';
 
 const infoList = [
   {
@@ -14,6 +17,7 @@ const infoList = [
     boxcolor: '#e85288',
     buttoncolor: '#e85288',
     place: 'Pokhara',
+    livesin: 'Fulbari',
   },
   {
     name: 'Laxmi Chhetri',
@@ -23,6 +27,7 @@ const infoList = [
     boxcolor: 'orange',
     buttoncolor: 'orange',
     place: 'Pokhara',
+    livesin: 'Valam',
   },
   {
     name: 'Aayusha KC',
@@ -31,6 +36,8 @@ const infoList = [
     intro: 'INTRODUCTION',
     boxcolor: '#e2c961',
     buttoncolor: '#e2c961',
+    place: 'Pokhara',
+    livesin: 'Valam',
   },
   {
     name: 'Sudha Shrestha',
@@ -40,15 +47,17 @@ const infoList = [
     boxcolor: '#f2bc7b',
     buttoncolor: '#f2bc7b',
     place: 'Pokhara',
+    livesin: 'Manipal',
   },
   {
     name: 'Anmol Basnet',
     relation: 'Brother',
     image: require('./anmol.jpg'),
-    des: 'INTRODUCTION',
-    boxcolor: 'lightgray',
-    buttoncolor: 'lightgray',
+    intro: 'INTRODUCTION',
+    boxcolor: '#d4d4d4',
+    buttoncolor: '#d4d4d4',
     place: 'Aabukhaireni',
+    livesin: 'Aabukhaireni',
   },
   {
     name: 'Reyma Lamichhane',
@@ -58,15 +67,48 @@ const infoList = [
     boxcolor: '#f4b0c0',
     buttoncolor: '#f4b0c0',
     place: 'Pokhara',
+    livesin: 'Fulbari',
   },
 ];
-const App = ({ navigation }) => (
-  <View style={styles.view}>
+const App = ({ navigation }) => {
+  const [type, setCardType] = useState('');
+  return (
     <View style={styles.screen}>
-      <View style={styles.uppercontainer}>
-        <Text style={styles.title}>CONNECTIONS</Text>
+      <View style={{ flexDirection: 'row-reverse' }}>
+        <View
+          style={{ flexDirection: 'column', justifyContent: 'space-between' }}>
+          <TouchableOpacity
+            activeOpacity={0.85}
+            onPress={() => {
+              setCardType('gift');
+            }}>
+            <View style={styles.box}>
+              <Text style={styles.gift}>OFFER 🎉</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.85}
+            onPress={() => {
+              setCardType('buy');
+            }}>
+            <View style={styles.box}>
+              <Text style={styles.gift}>STORE 💰</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.85}
+            onPress={() => {
+              setCardType('offer');
+            }}>
+            <View style={styles.box}>
+              <Text style={styles.gift}>GIFT 🎁</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.uppercontainer}>
+          <Text style={styles.title}>CONNECTIONS</Text>
+        </View>
       </View>
-
       <FlatList
         keyExtractor={(item, index) => item.title + index.toString()}
         data={infoList}
@@ -76,13 +118,23 @@ const App = ({ navigation }) => (
               name={item.name}
               relation={item.relation}
               image={item.image}
-              onPress={() => navigation.navigate('Friendsprofile', item)}
+              onPress={() => navigation.navigate('Page2', item)}
             />
           );
         }}
       />
+
+      <Modal
+        visible={type !== ''}
+        onRequestClose={() => setCardType('')}
+        animationType={type === 'buy' ? 'slide' : 'fade'}
+        transparent={true}>
+        {type === 'gift' && <SmallModal onClose={() => setCardType('')} />}
+        {type === 'buy' && <BuyModal onClose={() => setCardType('')} />}
+        {type === 'offer' && <Promomodal onClose={() => setCardType('')} />}
+      </Modal>
     </View>
-  </View>
-);
+  );
+};
 
 export default App;

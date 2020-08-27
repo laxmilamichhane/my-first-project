@@ -47,11 +47,10 @@ const styles = StyleSheet.create({
     marginLeft: 310,
     marginRight: 10,
   },
-  continue: {
-    textAlign: 'center',
-    color: 'white',
-    fontSize: 24,
-    marginBottom: 4,
+  next: {
+    width: 30,
+    height: 30,
+    alignSelf: 'center',
   },
   signin: {
     fontSize: 26,

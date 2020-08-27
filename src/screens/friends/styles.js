@@ -1,27 +1,40 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  view: {
-    backgroundColor: 'white',
-    flex: 1,
-  },
   screen: {
     flex: 1,
     backgroundColor: 'black',
-    borderTopRightRadius: 160,
+    padding: 4,
   },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
-    letterSpacing: 1,
+    letterSpacing: 1.8,
+    textAlign: 'center',
+    marginHorizontal: 26,
+    marginTop: 30,
   },
   uppercontainer: {
     backgroundColor: 'white',
-    padding: 80,
-    marginRight: 10,
+    paddingVertical: 50,
     borderBottomRightRadius: 14,
-    borderTopRightRadius: 170,
-    marginBottom: 10,
+    borderTopRightRadius: 300,
+    marginBottom: 20,
+    paddingHorizontal: 12,
+  },
+  box: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    marginVertical: 6,
+    marginHorizontal: 10,
+    marginBottom: 20,
+  },
+  gift: {
+    color: 'black',
+    padding: 4,
+    fontSize: 12,
   },
 });
 export default styles;

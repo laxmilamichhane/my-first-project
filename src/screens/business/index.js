@@ -48,6 +48,7 @@ const App = ({ navigation }) => {
       <TitlesName name="Name" />
       <InputForm
         placeholder="Enter Name"
+        borderColor="lightgray"
         onChangeText={(userInput) => setName(userInput)}
       />
       <TitlesName name="Size" />

@@ -5,12 +5,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 12,
     marginVertical: 6,
-    padding: 10,
+    padding: 8,
     justifyContent: 'space-between',
     backgroundColor: 'white',
   },
   title: {
-    fontSize: 24,
+    fontSize: 22,
     color: 'black',
   },
   description: {

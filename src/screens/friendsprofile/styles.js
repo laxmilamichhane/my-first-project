@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   },
   uppercontainer: {
     backgroundColor: 'white',
-    paddingVertical: 70,
+    paddingVertical: 50,
     marginLeft: 90,
     borderBottomLeftRadius: 40,
   },
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: 'bold',
     color: 'black',
-    marginTop: 30,
+    marginTop: 20,
     marginLeft: 44,
   },
   text: {
@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   img: {
-    width: 150,
-    height: 150,
+    width: 110,
+    height: 110,
     position: 'absolute',
-    marginTop: 20,
+    marginTop: 10,
     borderRadius: 75,
     marginLeft: 20,
   },

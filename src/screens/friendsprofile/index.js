@@ -14,7 +14,16 @@ import styles from './styles';
 
 const App = ({ route }) => {
   const item = route.params;
-  const { image, name, intro, relation, boxcolor, buttoncolor, place } = item;
+  const {
+    image,
+    name,
+    intro,
+    relation,
+    boxcolor,
+    buttoncolor,
+    place,
+    livesin,
+  } = item;
   const aboutList = [
     {
       image: require('./map.png'),
@@ -24,12 +33,11 @@ const App = ({ route }) => {
     {
       image: require('./home.png'),
       title: 'Lives in',
-      place: 'Fulbari',
+      place: livesin,
     },
     {
       image: require('./puz.png'),
       title: 'Interests',
-      icon: [require('./forward.png')],
     },
     {
       image: require('./about.png'),
@@ -42,15 +50,20 @@ const App = ({ route }) => {
       <View style={styles.uppercontainer}>
         <View
           style={{
-            marginTop: 50,
+            marginTop: 40,
             flex: 1,
+            marginBottom: 20,
           }}>
           <Text style={styles.name}>{name || 'Laxmi Lamichhane'}</Text>
         </View>
       </View>
       <Image source={image || require('./ma.jpg')} style={styles.img} />
 
-      <View style={{ flexDirection: 'row', marginLeft: 20 }}>
+      <View
+        style={{
+          flexDirection: 'row',
+          marginLeft: 20,
+        }}>
         <SmallButtons name={relation || 'Me'} bgcolor={boxcolor || 'white'} />
         <SmallButtons name="Contacts" bgcolor={boxcolor || 'white'} />
         <SmallButtons name="Gallery" bgcolor={boxcolor || 'white'} />
@@ -59,7 +72,7 @@ const App = ({ route }) => {
         style={{
           flex: 1,
           backgroundColor: 'white',
-          marginTop: 38,
+          marginTop: 58,
           borderTopRightRadius: 20,
           borderTopLeftRadius: 20,
           padding: 20,
@@ -100,6 +113,7 @@ const App = ({ route }) => {
             );
           }}
         />
+
         <Button title="INVITE" color={buttoncolor || 'pink'} />
       </View>
     </View>
