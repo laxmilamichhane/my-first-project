@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
-    paddingHorizontal: 40,
+    paddingHorizontal: 14,
+    width: 360,
   },
   image: {
     height: 140,

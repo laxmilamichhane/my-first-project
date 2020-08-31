@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, FlatList } from 'react-native';
+import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import SettingBoxes from '../../components/SettingBoxes';
 
@@ -37,11 +37,17 @@ const businessList = [
 ];
 const App = ({ navigation }) => (
   <View style={styles.screen}>
-    <Text style={styles.name}>Hello Laxmi</Text>
-    <Image source={require('./lyx.jpg')} style={styles.image} />
-    <Text style={styles.nickname}>laxmilamichhane</Text>
-    <Text style={styles.address}>Pokhara</Text>
-
+    <View style={{ flexDirection: 'row' }}>
+      <TouchableOpacity onPress={() => navigation.navigate('Page')}>
+        <Image source={require('./home.png')} style={styles.home} />
+      </TouchableOpacity>
+      <View style={{ flexDirection: 'column', marginLeft: 70 }}>
+        <Text style={styles.name}>Hello Laxmi</Text>
+        <Image source={require('./beautifool.jpg')} style={styles.image} />
+        <Text style={styles.nickname}>laxmilamichhane</Text>
+        <Text style={styles.address}>Pokhara</Text>
+      </View>
+    </View>
     <FlatList
       keyExtractor={(item, index) => item.title + index.toString()}
       showsVerticalScrollIndicator={false}

@@ -2,12 +2,15 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   box: {
     borderWidth: 1,
+    borderColor: '#0004',
     paddingHorizontal: 4,
     paddingVertical: 4,
     marginTop: 6,
     flexDirection: 'row',
     width: 190,
     height: 40,
+    borderRadius: 6,
+    backgroundColor: '#FDCA',
   },
   name: {
     fontSize: 18,

@@ -3,11 +3,11 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: 'white',
-    paddingVertical: 10,
-    marginVertical: 190,
+    padding: 8,
+    marginVertical: 200,
     borderRadius: 40,
-    paddingHorizontal: 10,
-
+    width: 350,
+    height: 450,
   },
   image: {
     height: 140,
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   title: {
-    fontSize: 26,
+    fontSize: 24,
     marginTop: 30,
     textAlign: 'center',
   },
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     width: 20,
     alignSelf: 'flex-end',
     padding: 10,
-    marginRight: 10,
+    marginRight: 14,
+    marginTop: 10,
   },
 });
 export default styles;

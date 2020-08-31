@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const PrivatePublic = ({ work, onPress, selected, type }) => {
+const PrivatePublic = ({ work, selected }) => {
   return (
-    <TouchableOpacity activeOpacity={0.85} onPress={() => onPress(type)}>
+    <TouchableOpacity activeOpacity={0.44}>
       <View
         style={[
           styles.box,

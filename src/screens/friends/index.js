@@ -118,7 +118,7 @@ const App = ({ navigation }) => {
               name={item.name}
               relation={item.relation}
               image={item.image}
-              onPress={() => navigation.navigate('Page2', item)}
+              onPress={() => navigation.navigate('Page3', item)}
             />
           );
         }}

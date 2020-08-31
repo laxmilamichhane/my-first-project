@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
-const BuyModal = ({ onClose, selected }) => {
+const BuyModal = ({ onClose }) => {
   return (
     <View>
       <View

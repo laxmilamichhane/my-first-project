@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import SmallButtons from '../../components/SmallButtons';
-import SettingBoxes from '../../components/SettingBoxes';
+import FriendsBox from '../../components/FriendsBox';
 import styles from './styles';
 
 const App = ({ route }) => {
@@ -38,6 +38,7 @@ const App = ({ route }) => {
     {
       image: require('./puz.png'),
       title: 'Interests',
+      place: '»',
     },
     {
       image: require('./about.png'),
@@ -105,7 +106,7 @@ const App = ({ route }) => {
           data={aboutList}
           renderItem={({ item, index }) => {
             return (
-              <SettingBoxes
+              <FriendsBox
                 title={item.title}
                 image={item.image}
                 place={item.place}

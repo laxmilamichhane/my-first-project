@@ -9,18 +9,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     marginLeft: 8,
+    flex: 1,
   },
-  header: {
-    fontSize: 20,
-    color: 'gray',
-    letterSpacing: 1,
-    marginVertical: 6,
-    backgroundColor: 'red',
+  image: {
+    width: 30,
+    height: 30,
   },
-  icon: {
-    width: 20,
-    height: 20,
-    marginTop: 4,
-  },
+  place: { fontSize: 20, color: 'gray' },
 });
 export default styles;

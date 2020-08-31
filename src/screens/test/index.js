@@ -31,13 +31,13 @@ const App = ({ navigation }) => {
       <Image source={require('./link.png')} style={styles.image} />
       <Text style={styles.title}>𝖶𝖾𝗅𝖼𝗈𝗆𝖾</Text>
       <Text style={styles.title2}>𝗍𝗈 Connector</Text>
-      <Text style={styles.des}>Improve your Connection with your friends</Text>
+      <Text style={styles.des}>Improve Connection with your friends</Text>
 
       <View style={styles.inputs}>
         <Text style={styles.signin}>Sign In</Text>
         <TextInput
           style={styles.input}
-          placeholder="Email"
+          placeholder="Email/Username"
           onChangeText={(userInput) => setName(userInput)}
         />
         <TextInput
@@ -53,7 +53,7 @@ const App = ({ navigation }) => {
             if (result === true) {
               setLoading(true);
               setTimeout(() => {
-                navigation.navigate('Home');
+                navigation.navigate('Page2');
                 setLoading(false);
               }, 1000);
             }
