@@ -2,18 +2,18 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 32,
+    fontSize: 30,
     color: 'black',
     fontWeight: 'bold',
-    marginHorizontal: 14,
-    marginTop: 12,
+    textAlign: 'center',
+    marginTop: 8,
   },
   box: {
-    height: 66,
-    width: 50,
+    height: 60,
+    width: 60,
     marginHorizontal: 12,
-    borderRadius: 16,
-    backgroundColor: '#8fd9f7',
+    borderRadius: 30,
+    backgroundColor: '#8fd9f8',
     marginBottom: 12,
   },
 });

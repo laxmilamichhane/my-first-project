@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
-const InputBox = ({}) => {
+const InputBox = ({ letter, onPress, selected }) => {
   return (
-    <View style={styles.box}>
-      <TextInput style={styles.text} keyboardType="numeric">
-        {}
-      </TextInput>
-    </View>
+    <TouchableOpacity activeOpacity={0.85} onPress={onPress}>
+      <View style={styles.box}>
+        <Text style={styles.text}>{selected ? ' ' : letter}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 export default InputBox;

@@ -3,7 +3,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import startup from './src/screens/startup';
+import uikitten from './src/screens/uikitten';
 import startup2 from './src/screens/startup2';
 import setting from './src/screens/setting';
 import cookmasterlog from './src/screens/cookmasterlog';
@@ -21,7 +21,7 @@ const App = () => (
         <Stack.Screen
           options={{ headerShown: false }}
           name="Page"
-          component={startup}
+          component={uikitten}
         />
         <Stack.Screen
           options={{ headerShown: false }}
